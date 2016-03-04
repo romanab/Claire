@@ -19,6 +19,7 @@
 	   #:set-dispatch-macro-character
 	   #:copy-readtable
 	   #:readtable-case
+	   #:token-parser
 	   #:character-syntax
 	   #:whitespace
 	   #:constituent
