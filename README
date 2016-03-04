@@ -1,0 +1,3 @@
+Claire is a library that provides a generic versions of the standard
+Common Lisp functions for manipulating readtables, and of the Common
+Lisp reader itself.
