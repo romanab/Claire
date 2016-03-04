@@ -3,6 +3,8 @@
 ;;; The protocol class for character syntax types.
 (defclass character-syntax () ())
 
+(defclass whitespace (character-syntax) ())
+
 (defclass constituent (character-syntax) ())
 
 (defclass invalid (character-syntax) ())
