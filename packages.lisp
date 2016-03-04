@@ -9,4 +9,10 @@
 	   #:get-dispatch-macro-character
 	   #:set-dispatch-macro-character
 	   #:copy-readtable)
-  (:export))
+  (:export #:readtable
+	   #:get-macro-character
+	   #:set-macro-character
+	   #:make-dispatch-macro-character
+	   #:get-dispatch-macro-character
+	   #:set-dispatch-macro-character
+	   #:copy-readtable))
