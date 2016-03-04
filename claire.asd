@@ -5,4 +5,5 @@
   :serial t
   :components
   ((:file "packages")
-   (:file "readtable-protocol")))
+   (:file "readtable-protocol")
+   (:file "character-syntax")))
