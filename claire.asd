@@ -6,5 +6,6 @@
   :components
   ((:file "packages")
    (:file "readtable-protocol")
+   (:file "token-parser-protocol")
    (:file "character-syntax")
    (:file "standard-readtable")))
