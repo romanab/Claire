@@ -20,6 +20,7 @@
 	   #:copy-readtable
 	   #:readtable-case
 	   #:token-parser
+	   #:standard-token-parser
 	   #:character-syntax
 	   #:whitespace
 	   #:constituent
