@@ -15,4 +15,13 @@
 	   #:make-dispatch-macro-character
 	   #:get-dispatch-macro-character
 	   #:set-dispatch-macro-character
-	   #:copy-readtable))
+	   #:copy-readtable
+	   #:character-syntax
+	   #:whitespace
+	   #:constituent
+	   #:invalid
+	   #:macro-character
+	   #:terminating-macro-character
+	   #:non-terminating-macro-character
+	   #:single-escape
+	   #:multiple-escape))
