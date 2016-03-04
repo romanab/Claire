@@ -6,4 +6,5 @@
   :components
   ((:file "packages")
    (:file "readtable-protocol")
-   (:file "character-syntax")))
+   (:file "character-syntax")
+   (:file "standard-readtable")))
