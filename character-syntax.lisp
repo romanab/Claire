@@ -18,3 +18,8 @@
 (defclass single-escape (character-syntax) ())
 
 (defclass multiple-escape (character-syntax) ())
+
+;;; Retrieve the syntax of CHARACTER in READTABLE.  The return value
+;;; is an instance of (a subclass of) the class CHARACTER-SYNTAX
+;;; describing the syntax of the CHARACTER in READTABLE.
+(defgeneric character-syntax (readtable character))
