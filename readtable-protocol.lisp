@@ -12,3 +12,7 @@
 ;;; SET-MACRO-CHARACTER.
 (defgeneric set-macro-character
     (readtable character function &optional non-terminating-p))
+
+;;; This function is a generic version of the Common Lisp function
+;;; READTABLE-CASE.
+(defgeneric readtable-case (readtable))
