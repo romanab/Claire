@@ -23,3 +23,8 @@
 ;;; is an instance of (a subclass of) the class CHARACTER-SYNTAX
 ;;; describing the syntax of the CHARACTER in READTABLE.
 (defgeneric character-syntax (readtable character))
+
+;;; Set the syntax of CHARACTER in READTABLE to SYNTAX.  SYNTAX is an
+;;; instance of (a subclass of) the class CHARACTER-SYNTAX describing
+;;; the syntax of the character.
+(defgeneric (setf character-syntax) (syntax readtable character))
