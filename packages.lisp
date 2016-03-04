@@ -11,6 +11,7 @@
 	   #:copy-readtable
 	   #:readtable-case)
   (:export #:readtable
+	   #:standard-readtable
 	   #:get-macro-character
 	   #:set-macro-character
 	   #:make-dispatch-macro-character
