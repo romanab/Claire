@@ -5,6 +5,10 @@
 (defclass readtable () ())
 
 ;;; This function is a generic version of the Common Lisp function
+;;; COPY-READTABLE.
+(defgeneric copy-readtable (readtable))
+
+;;; This function is a generic version of the Common Lisp function
 ;;; GET-MACRO-CHARACTER.
 (defgeneric get-macro-character (readtable character))
 
