@@ -20,3 +20,6 @@
 ;;; This function is a generic version of the Common Lisp function
 ;;; READTABLE-CASE.
 (defgeneric readtable-case (readtable))
+
+;;; Return the current token parser of READTABLE.
+(defgeneric token-parser (readtable))
