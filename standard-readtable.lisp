@@ -10,7 +10,12 @@
    (%dispatch-macro-characters
     :initform (make-hash-table)
     :reader dispatch-macro-characters)
-   (%readtable-case :initform :upcase :accessor readtable-case)))
+   (%readtable-case
+    :initform :upcase
+    :accessor readtable-case)
+   (%token-parser
+    :initform (make-instance 'standard-token-parser)
+    :accessor token-parser)))
 
 (defmethod copy-readtable ((readtable standard-readtable))
   (let ((result (make-instance 'standard-readtable)))
