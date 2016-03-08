@@ -9,4 +9,5 @@
    (:file "token-parser-protocol")
    (:file "standard-token-parser")
    (:file "character-syntax")
-   (:file "standard-readtable")))
+   (:file "standard-readtable")
+   (:file "reader-state")))
