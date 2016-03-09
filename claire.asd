@@ -11,4 +11,5 @@
    (:file "character-syntax")
    (:file "standard-readtable")
    (:file "reader-state")
+   (:file "reader-algorithm")
    (:file "default-reader-algorithm")))
