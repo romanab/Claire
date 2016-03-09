@@ -3,6 +3,11 @@
 ;;; The classes representing reader state correspond to the numbered
 ;;; steps in section 2.2 of the Common Lisp HyperSpec.
 
+;;; This class can be used as a mixin for states that hold on to a
+;;; single character.
+(defclass character-mixin ()
+  ((%character :initarg :character :reader character)))
+
 ;;; This class is the protocol class for all reader states.
 (defclass reader-state () ())
 
@@ -20,5 +25,5 @@
 ;;; this situation, rather than duplicating the code that signals an
 ;;; error.  That way, client code need only define one method for the
 ;;; processing of an invalid character.
-(defclass reader-state-2 (reader-state)
-  ((%character :initarg :character :reader character)))
+(defclass reader-state-2 (reader-state character-mixin)
+  ())
