@@ -3,6 +3,10 @@
 ;;; Protocol class for syntax types.
 (defclass syntax () ())
 
+;;; This class is used as a syntax object when an END-OF-FILE was
+;;; reached as a result of an attempt to read a character.
+(defclass end-of-file (syntax) ())
+
 ;;; Protocol class for character syntax types.
 (defclass character-syntax (syntax) ())
 
