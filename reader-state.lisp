@@ -41,3 +41,11 @@
 ;;; with the input stream and the character.
 (defclass reader-state-4 (reader-state character-mixin)
   ())
+
+;;; State 5 is entered when a single escape character has been read.
+;;; According to section 2.2 of the HyperSpec, the next character is
+;;; read and (unless end-of-file is encountered) that character is
+;;; treated as a constituent character that begins a token, and then
+;;; state 8 is entered.
+(defclass reader-state-5 (reader-state character-mixin)
+  ())
