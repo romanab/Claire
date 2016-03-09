@@ -66,3 +66,7 @@
     (setf (readtable-case result)
 	  (readtable-case readtable))
     result))
+
+(defmethod character-syntax ((readtable standard-readtable) character)
+  (or (gethash character (syntax-types readtable))
+      (make-instance 'constituent :character character)))
