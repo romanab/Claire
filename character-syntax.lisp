@@ -1,7 +1,10 @@
 (cl:in-package #:claire)
 
-;;; The protocol class for character syntax types.
-(defclass character-syntax () ())
+;;; Protocol class for syntax types.
+(defclass syntax () ())
+
+;;; Protocol class for character syntax types.
+(defclass character-syntax (syntax) ())
 
 (defclass whitespace (character-syntax) ())
 
