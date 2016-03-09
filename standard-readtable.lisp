@@ -30,6 +30,11 @@
 	(make-instance 'single-escape :character #\\))
   (setf (gethash #\| (syntax-types object))
 	(make-instance 'multiple-escape :character #\|))
+  ;; Even though the default syntax type for the standard readtable is
+  ;; CONSTITUENT, we enter pre-created instances for some constituent
+  ;; characters into the hash table in order to avoid memory
+  ;; allocation in the form of character syntax instances for
+  ;; characters that occur frequently in input.
   (loop for char in '(#\! #\$ #\% #\& #\* #\+ #\- #\. #\/ #\:
 		      #\< #\= #\> #\? #\@ #\[ #\] #\^ #\_ #\{ #\} #\~)
 	do (setf (gethash char (syntax-types object))
