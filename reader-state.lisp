@@ -34,3 +34,10 @@
 ;;; do something else, of course.
 (defclass reader-state-3 (reader-state character-mixin)
   ())
+
+;;; State 4 is entered when a terminating or a non-terminating macro
+;;; character has been read.  According to section 2.2 of the
+;;; HyperSpec, the normal action then is to call the macro function
+;;; with the input stream and the character.
+(defclass reader-state-4 (reader-state character-mixin)
+  ())
