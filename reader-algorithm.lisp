@@ -5,3 +5,5 @@
 (defvar *current-reader-state*)
 
 (defvar *current-syntax-type*)
+
+(defgeneric reader-step (readtable state syntax))
