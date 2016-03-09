@@ -31,4 +31,5 @@
 	   #:terminating-macro-character
 	   #:non-terminating-macro-character
 	   #:single-escape
-	   #:multiple-escape))
+	   #:multiple-escape
+	   #:end-of-file))
