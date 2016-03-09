@@ -32,4 +32,5 @@
 	   #:non-terminating-macro-character
 	   #:single-escape
 	   #:multiple-escape
-	   #:end-of-file))
+	   #:end-of-file
+	   #:character))
