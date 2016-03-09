@@ -55,3 +55,9 @@
 ;;; then state state 9 is entered.
 (defclass reader-state-6 (reader-state character-mixin)
   ())
+
+;;; State 7 is entered when a constituent character has been read.
+;;; According to section 2.2 of the HyperSpec, a token is begun and
+;;; then state state 8 is entered.
+(defclass reader-state-7 (reader-state character-mixin)
+  ())
