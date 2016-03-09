@@ -10,4 +10,5 @@
    (:file "standard-token-parser")
    (:file "character-syntax")
    (:file "standard-readtable")
-   (:file "reader-state")))
+   (:file "reader-state")
+   (:file "default-reader-algorithm")))
