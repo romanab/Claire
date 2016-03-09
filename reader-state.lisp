@@ -21,4 +21,4 @@
 ;;; error.  That way, client code need only define one method for the
 ;;; processing of an invalid character.
 (defclass reader-state-2 (reader-state)
-  ((%invalid-character :initarg :invalid-character :reader invalid-character)))
+  ((%character :initarg :character :reader character)))
