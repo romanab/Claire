@@ -27,5 +27,4 @@
 (defmethod reader-step ((readtable standard-readtable)
 			(state reader-state-1)
 			(syntax macro-character))
-  (setf *current-reader-state*
-	(make-instance 'reader-state-3)))
+  (setf *current-reader-state* *reader-state-4*))
