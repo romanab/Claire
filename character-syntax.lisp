@@ -8,7 +8,8 @@
 (defclass end-of-file (syntax) ())
 
 ;;; Protocol class for character syntax types.
-(defclass character-syntax (syntax) ())
+(defclass character-syntax (syntax)
+  ((%character :initarg :character :reader character)))
 
 (defclass whitespace (character-syntax) ())
 
