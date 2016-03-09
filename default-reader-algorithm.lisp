@@ -31,3 +31,10 @@
 			(state reader-state-1)
 			(syntax macro-character))
   (setf *current-reader-state* *reader-state-4*))
+
+(defmethod reader-step ((readtable standard-readtable)
+			(state reader-state-1)
+			(syntax single-escape))
+  (setf *current-reader-state* *reader-state-5*)
+  (setf *current-syntax-type*
+	(read-character-with-syntax-type *current-stream* readtable)))
