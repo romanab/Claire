@@ -3,11 +3,6 @@
 ;;; The classes representing reader state correspond to the numbered
 ;;; steps in section 2.2 of the Common Lisp HyperSpec.
 
-;;; This class can be used as a mixin for states that hold on to a
-;;; single character.
-(defclass character-mixin ()
-  ((%character :initarg :character :reader character)))
-
 ;;; This class is the protocol class for all reader states.
 (defclass reader-state () ())
 
@@ -25,21 +20,21 @@
 ;;; this situation, rather than duplicating the code that signals an
 ;;; error.  That way, client code need only define one method for the
 ;;; processing of an invalid character.
-(defclass reader-state-2 (reader-state character-mixin)
+(defclass reader-state-2 (reader-state)
   ())
 
 ;;; State 3 is entered when a whitespace character has been read.
 ;;; According to section 2.2 of the HyperSpec, the character is
 ;;; discarded, and state 1 is re-entered.  Client code might want to
 ;;; do something else, of course.
-(defclass reader-state-3 (reader-state character-mixin)
+(defclass reader-state-3 (reader-state)
   ())
 
 ;;; State 4 is entered when a terminating or a non-terminating macro
 ;;; character has been read.  According to section 2.2 of the
 ;;; HyperSpec, the normal action then is to call the macro function
 ;;; with the input stream and the character.
-(defclass reader-state-4 (reader-state character-mixin)
+(defclass reader-state-4 (reader-state)
   ())
 
 ;;; State 5 is entered when a single escape character has been read.
@@ -47,17 +42,17 @@
 ;;; read and (unless end-of-file is encountered) that character is
 ;;; treated as a constituent character that begins a token, and then
 ;;; state 8 is entered.
-(defclass reader-state-5 (reader-state character-mixin)
+(defclass reader-state-5 (reader-state)
   ())
 
 ;;; State 6 is entered when a multiple escape character has been read.
 ;;; According to section 2.2 of the HyperSpec, a token is begun and
 ;;; then state state 9 is entered.
-(defclass reader-state-6 (reader-state character-mixin)
+(defclass reader-state-6 (reader-state)
   ())
 
 ;;; State 7 is entered when a constituent character has been read.
 ;;; According to section 2.2 of the HyperSpec, a token is begun and
 ;;; then state state 8 is entered.
-(defclass reader-state-7 (reader-state character-mixin)
+(defclass reader-state-7 (reader-state)
   ())
