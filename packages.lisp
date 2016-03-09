@@ -10,7 +10,8 @@
 	   #:set-dispatch-macro-character
 	   #:copy-readtable
 	   #:readtable-case
-	   #:character)
+	   #:character
+	   #:end-of-file)
   (:export #:readtable
 	   #:standard-readtable
 	   #:get-macro-character
