@@ -10,3 +10,9 @@
 			(syntax invalid))
   (setf *current-reader-state*
 	(make-instance 'reader-state-2)))
+
+(defmethod reader-step ((readtable standard-readtable)
+			(state reader-state-1)
+			(syntax whitespace))
+  (setf *current-reader-state*
+	(make-instance 'reader-state-3)))
