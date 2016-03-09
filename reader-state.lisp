@@ -27,3 +27,10 @@
 ;;; processing of an invalid character.
 (defclass reader-state-2 (reader-state character-mixin)
   ())
+
+;;; State 3 is entered when a whitespace character has been read.
+;;; According to section 2.2 of the HyperSpec, the character is
+;;; discarded, and state 1 is re-entered.  Client code might want to
+;;; do something else, of course.
+(defclass reader-state-3 (reader-state character-mixin)
+  ())
