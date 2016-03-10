@@ -41,3 +41,8 @@
   (setf *current-reader-state* *reader-state-5*)
   (setf *current-syntax-type*
 	(read-character-with-syntax-type *current-stream* readtable)))
+
+(defmethod reader-step ((readtable standard-readtable)
+			(state reader-state-1)
+			(syntax multiple-escape))
+  (setf *current-reader-state* *reader-state-6*))
