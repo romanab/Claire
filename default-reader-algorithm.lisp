@@ -49,3 +49,8 @@
 			(state reader-state-1)
 			(syntax multiple-escape))
   (setf *current-reader-state* *reader-state-6*))
+
+(defmethod reader-step ((readtable standard-readtable)
+			(state reader-state-1)
+			(syntax constituent))
+  (setf *current-reader-state* *reader-state-7*))
