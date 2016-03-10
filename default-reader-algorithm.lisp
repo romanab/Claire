@@ -12,6 +12,9 @@
 (defparameter *reader-state-5*
   (make-instance 'reader-state-5))
 
+(defparameter *reader-state-6*
+  (make-instance 'reader-state-6))
+
 (defmethod reader-step ((readtable standard-readtable)
 			(state reader-state-1)
 			(syntax end-of-file))
